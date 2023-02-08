@@ -1,6 +1,6 @@
 <footer class="main-footer">
   <div class="footer-left">
-    Copyright &copy; 2021 Firdaus Zulkarnain</a>
+    Copyright &copy; 2023 Achmad Eryl Nanda Pratama</a>
   </div>
 </footer>
 </div>

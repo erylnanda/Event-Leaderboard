@@ -18,7 +18,7 @@ class Peserta extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'Kategori Produk';
-        $data['kategori'] = $this->Model_Produk->get_kategori($user_id);
+        $data['kategori'] = $this->M_Peserta->get_kategori($user_id);
 
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
@@ -51,7 +51,7 @@ class Peserta extends CI_Controller
             $this->load->view('kategori/tambah_kategori', $data);
             $this->load->view('template/footer');
         } else {
-            $this->Model_Produk->tambah_kategori($user_id);
+            $this->M_Peserta->tambah_kategori($user_id);
             $this->session->set_flashdata('pesan', 'Tambah Kategori Produk');
             redirect('produk/kategori');
         }
@@ -60,7 +60,7 @@ class Peserta extends CI_Controller
     // Hapus Kategori 
     public function hapus_peserta($id_kategori)
     {
-        $this->Model_Produk->hapus_kategori($id_kategori);
+        $this->M_Peserta->hapus_kategori($id_kategori);
         $this->session->set_flashdata('pesan', 'Hapus Kategori Produk ');
         redirect('produk/kategori');
     }
@@ -91,7 +91,7 @@ class Peserta extends CI_Controller
             $this->load->view('kategori/update_kategori', $data);
             $this->load->view('template/footer');
         } else {
-            $this->Model_Produk->update_kategori($id_kategori);
+            $this->M_Peserta->update_kategori($id_kategori);
             $this->session->set_flashdata('pesan', 'Update Kategori Produk');
             redirect('produk/kategori');
         }

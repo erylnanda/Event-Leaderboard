@@ -11,8 +11,8 @@
                 <table class="table table-bordered table-light shadow-sm p-3 mb-5 bg-white rounded dt-responsive nowrap" id="tabel-kategori" width="100%">
                     <thead>
                         <tr>
-                            <th scope="col" class="text-center">Foto</th>
                             <th scope="col" class="text-center">Nama Peserta</th>
+                            <th scope="col" class="text-center">Foto</th>
                             <th scope="col" class="text-center">Action</th>
                         </tr>
                     </thead>
