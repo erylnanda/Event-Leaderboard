@@ -6,7 +6,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="card card-statistic-2">
           <div class="card-icon shadow-primary bg-primary text-light font-weight-bold">
-            Rp.
+          <i class="fas fa-user"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
@@ -20,7 +20,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="card card-statistic-2">
           <div class="card-icon shadow-primary bg-primary">
-            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-list"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">

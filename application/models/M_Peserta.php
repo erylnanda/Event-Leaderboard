@@ -10,11 +10,12 @@ class M_Peserta extends CI_Model
     }
 
     // Tambah peserta
-    public function tambah_peserta($user_id)
+    public function tambah_peserta($user_id,$new_data)
     {
         $data = [
             'user_id' => $user_id,
-            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama')))
+            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama'))),
+            'foto' => $new_data
         ];
 
         $this->db->insert('peserta', $data);
@@ -28,10 +29,11 @@ class M_Peserta extends CI_Model
         $this->db->delete('peserta');
     }
 
-    public function update_peserta($id_peserta)
+    public function update_peserta($id_peserta,$new_data)
     {
         $data = [
-            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama')))
+            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama'))),
+            'foto' => $new_data
         ];
 
         $this->db->where('id_peserta', $id_peserta);
