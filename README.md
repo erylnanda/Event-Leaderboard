@@ -1,5 +1,6 @@
 ## Tentang Aplikasi
-Aplikasi yang dapat digunakan untuk mencatat produk, jumlah pembelian dan penjualan produk. terdiri dari fitur kategori, produk, laporan penjualan dan pembelian
+
+Aplikasi yang dapat digunakan untuk mencatat rangking dan point didalam pertandingan atau event yang diselengarakan
 
 ## Teknologi
 
@@ -11,13 +12,11 @@ Aplikasi yang dapat digunakan untuk mencatat produk, jumlah pembelian dan penjua
 - [DOMPDF](https://github.com/dompdf/dompdf)
 
 ## Langkah Installasi
+
 - Download & Install [XAMPP](https://www.apachefriends.org/download.html)
 - Letakan Folder di c:/xampp/htdocs
-- Rename Folder Menjadi 'buku-usaha'
+- Rename Folder Menjadi 'leaderboard'
 - Jalankan XAMPP dan Start pada module Apache & Mysql
 - Buat Database dengan nama 'buku-usaha' di localhost/phpmyadmin
-- Import file buku-usaha.sql dalam folder buku-usaha ke database buku-usaha
-- jalankan localhost/buku-usaha
-
-## Demo Program
-Link Demo Program: https://bit.ly/BukuUsaha
+- Import file leaderboard.sql dalam folder leaderboard ke database leaderboard
+- jalankan localhost/leaderboard
