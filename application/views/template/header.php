@@ -21,6 +21,9 @@
 
 
   <!-- Template CSS -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/home/css/style.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/style.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/components.css">
 

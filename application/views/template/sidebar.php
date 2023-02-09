@@ -44,7 +44,7 @@
                 </a>
             </li>
 
-            <li class="menu-header">Profil Lomba</li>
+            <li class="menu-header">Profil User</li>
             <li <?= $this->uri->segment(1) == 'profil' ? 'class="active"' : "" ?>>
                 <a class="nav-link" href="<?= base_url() ?>profil">
                     <i class="fas fa-store"></i>

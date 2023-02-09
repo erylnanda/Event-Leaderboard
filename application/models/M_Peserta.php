@@ -29,11 +29,20 @@ class M_Peserta extends CI_Model
         $this->db->delete('peserta');
     }
 
-    public function update_peserta($id_peserta,$new_data)
+    public function update_peserta_foto($id_peserta,$new_data)
     {
         $data = [
             'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama'))),
             'foto' => $new_data
+        ];
+
+        $this->db->where('id_peserta', $id_peserta);
+        $this->db->update('peserta', $data);
+    }
+    public function update_peserta($id_peserta)
+    {
+        $data = [
+            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama')))
         ];
 
         $this->db->where('id_peserta', $id_peserta);

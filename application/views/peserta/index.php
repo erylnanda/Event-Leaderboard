@@ -17,14 +17,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($kategori as $kt) : ?>
+                        <?php foreach ($peserta as $p) : ?>
                             <tr>
-                                <td class="text-capitalize"><?= $kt['nama_kategori']; ?></td>
+                                <td class="text-capitalize text-center"><?= $p['nama_peserta']; ?></td>
+                                <td class="text-center"><img src="<?= base_url('upload/avatar/' .$p['foto']); ?>" class="circle-img circle-img--small mr-2" alt="User Img"></td>
                                 <td class="text-center">
                                     <!-- Button Update -->
-                                    <a href="<?= base_url(); ?>/produk/update_kategori/<?= $kt['id_kategori'] ?>" class="btn btn-sm btn-success text-light"><i class="fas fa-edit"></i></a>
+                                    <a href="<?= base_url(); ?>peserta/update_peserta/<?= $p['id_peserta'] ?>" class="btn btn-sm btn-success text-light"><i class="fas fa-edit"></i></a>
                                     <!-- Button Hapus -->
-                                    <a href="<?= base_url(); ?>/produk/hapus_kategori/<?= $kt['id_kategori'] ?>" class="btn btn-sm btn-danger text-light tombol-hapus"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="<?= base_url(); ?>peserta/hapus_peserta/<?= $p['id_peserta'] ?>" class="btn btn-sm btn-danger text-light tombol-hapus"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
