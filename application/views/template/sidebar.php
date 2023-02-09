@@ -44,6 +44,14 @@
                 </a>
             </li>
 
+            <li class="menu-header">Nilai</li>
+            <li <?= $this->uri->segment(1) == 'Point' ? 'class="active"' : "" ?>>
+                <a class="nav-link" href="<?= base_url(); ?>Point">
+                    <i class="fas fa-star"></i>
+                    <span>Data Nilai</span>
+                </a>
+            </li>
+
             <li class="menu-header">Profil User</li>
             <li <?= $this->uri->segment(1) == 'profil' ? 'class="active"' : "" ?>>
                 <a class="nav-link" href="<?= base_url() ?>profil">
