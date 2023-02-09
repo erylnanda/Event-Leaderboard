@@ -16,101 +16,115 @@
 			<br>
 
 			<div class="row">
-				<div class="col-sm-4">
-					<div class="leaderboard-card">
-						<div class="leaderboard-card__top">
-							<h3 class="text-center">$1,051</h3>
-						</div>
-						<div class="leaderboard-card__body">
-							<div class="text-center">
-								<img src="<?= base_url(); ?>/assets/home/img/user2.jpg" class="circle-img mb-2" alt="User Img">
-								<h5 class="mb-0">Sandeep Sandy</h5>
-								<p class="text-muted mb-0">@sandeep</p>
-								<hr>
-								<div class="d-flex justify-content-between align-items-center">
-									<span><i class="fa fa-map-marker"></i> Bangalore</span>
-									<button class="btn btn-outline-success btn-sm">Congratulate</button>
+				<?php if ($peserta != null) : ?>
+					<div class="col-sm-4">
+						<div class="leaderboard-card">
+							<div class="leaderboard-card__top">
+								<h3 class="text-center">2</h3>
+							</div>
+							<div class="leaderboard-card__body">
+								<div class="text-center">
+									<img src="<?= base_url('upload/avatar/' .$peserta[1]['foto']); ?>" class="circle-img mb-2" alt="User Img">
+									<h5 class="mb-0"><?= $peserta[1]['nama_peserta']; ?></h5>
+									<h5 class="mb-0"><?= $peserta[1]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="leaderboard-card leaderboard-card--first">
-						<div class="leaderboard-card__top">
-							<h3 class="text-center">$1,254</h3>
-						</div>
-						<div class="leaderboard-card__body">
-							<div class="text-center">
-								<img src="<?= base_url(); ?>/assets/home/img/user1.jpg" class="circle-img mb-2" alt="User Img">
-								<h5 class="mb-0">Kiran Acharya</h5>
-								<p class="text-muted mb-0">@kiranacharyaa</p>
-								<hr>
-								<div class="d-flex justify-content-between align-items-center">
-									<span><i class="fa fa-map-marker"></i> Bangalore</span>
-									<button class="btn btn-outline-success btn-sm">Congratulate</button>
+					<div class="col-sm-4">
+						<div class="leaderboard-card leaderboard-card--first">
+							<div class="leaderboard-card__top">
+								<h3 class="text-center">1</h3>
+							</div>
+							<div class="leaderboard-card__body">
+								<div class="text-center">
+									<img src="<?= base_url('upload/avatar/' .$peserta[0]['foto']); ?>" class="circle-img mb-2" alt="User Img">
+									<h5 class="mb-0"><?= $peserta[0]['nama_peserta']; ?></h5>
+									<h5 class="mb-0"><?= $peserta[0]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="leaderboard-card">
-						<div class="leaderboard-card__top">
-							<h3 class="text-center">$1,012</h3>
-						</div>
-						<div class="leaderboard-card__body">
-							<div class="text-center">
-								<img src="<?= base_url(); ?>/assets/home/img/user3.jpg" class="circle-img mb-2" alt="User Img">
-								<h5 class="mb-0">John doe</h5>
-								<p class="text-muted mb-0">@johndoe</p>
-								<hr>
-								<div class="d-flex justify-content-between align-items-center">
-									<span><i class="fa fa-map-marker"></i> Bangalore</span>
-									<button class="btn btn-outline-success btn-sm">Congratulate</button>
+					<div class="col-sm-4">
+						<div class="leaderboard-card">
+							<div class="leaderboard-card__top">
+								<h3 class="text-center">3</h3>
+							</div>
+							<div class="leaderboard-card__body">
+								<div class="text-center">
+									<img src="<?= base_url('upload/avatar/' .$peserta[2]['foto']); ?>" class="circle-img mb-2" alt="User Img">
+									<h5 class="mb-0"><?= $peserta[2]['nama_peserta']; ?></h5>
+									<h5 class="mb-0"><?= $peserta[2]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				<?php else : ?>
+					<div class="jumbotron">
+						<div class="container">
+							<h1 class="display-4">Empty Data</h1>
+							<p class="lead">Tidak ada Point/Peserta yang di-input</p>
+							<hr class="my-4">
+							<p>Login untuk input data</p>
+							<p class="lead">
+								<a class="btn btn-primary btn-lg" href="<?= base_url('auth'); ?>" role="button">Login</a>
+							</p>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 
 
-			<h4>All Users</h4>
+			<h4>Semua Peserta</h4>
 
 			<table class="table">
-				<thead>
-					<tr>
-						<th>User</th>
-						<th>Status</th>
-						<th>Location</th>
-						<th>Email</th>
-						<th>Congratulate</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<div class="d-flex align-items-center">
-								<img src="<?= base_url(); ?>/assets/home/img/user1.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
-								<div class="user-info__basic">
-									<h5 class="mb-0">Kiran Acharya</h5>
-									<p class="text-muted mb-0">@kiranacharyaa</p>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="d-flex align-items-baseline">
-								<h4 class="mr-1">$1,253</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
-							</div>
-						</td>
-						<td>Bangalore</td>
-						<td>kiran@kiranmail.com</td>
-						<td>
-							<button class="btn btn-success btn-sm">Congratulate</button>
-						</td>
-					</tr>
-				</tbody>
+				<?php if ($peserta != null) : ?>
+					<thead>
+						<tr>
+							<th>User</th>
+							<th>Point</th>
+							<th>Peringkat</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php $i = 1; ?>
+						<?php foreach ($peserta as $p): ?>
+							<tr>
+								<td>
+									<div class="d-flex align-items-center">
+										<img src="<?= base_url('upload/avatar/' .$p['foto']); ?>" class="circle-img circle-img--small mr-2" alt="User Img">
+										<div class="user-info__basic">
+											<h5 class="mb-0"><?= $p['nama_peserta']; ?></h5>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="d-flex align-items-baselin">
+										<h4 class="mr-1"><?= $p['total']; ?></h4>
+									</div>
+								</td>
+								<td>
+									<div class="d-flex align-items-baseline justify-content-center">
+										<h4 class="mr-1"><?= $i; ?></h4>
+									</div>
+								</td>
+								<?php $i++; ?>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				<?php else : ?>
+					<div class="jumbotron">
+						<div class="container">
+							<h1 class="display-4">Empty Data</h1>
+							<p class="lead">Tidak ada Point/Peserta yang di-input</p>
+							<hr class="my-4">
+							<p>Login untuk input data</p>
+							<p class="lead">
+								<a class="btn btn-primary btn-lg" href="<?= base_url('auth'); ?>" role="button">Login</a>
+							</p>
+						</div>
+					</div>
+				<?php endif; ?>
 			</table>
 		</div>
 	</section>

@@ -12,11 +12,14 @@
                                 <?= form_error('nama', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="foto">Pilih Gambar Profil</label>
+                                <label for="foto">Pilih Gambar Profil</label> 
                                     <input type="file" name="foto" id="foto" accept="image/png, image/jpeg, image/jpg, image/gif">
                                     <?php if (isset($error)) : ?>
                                         <div class="form-text text-danger"><?= $error ?></div>
                                     <?php endif; ?>
+                            </div>
+                            <div class="form-group">
+                                <label small>Kosong kan foto bila tidak ingin diisi</label>
                             </div>
                             <a href="<?= base_url(); ?>/peserta" class="btn btn-danger">Kembali</a>
                             <button type="submit" class="btn btn-primary float-right">Simpan</button>

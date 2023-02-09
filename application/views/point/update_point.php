@@ -7,8 +7,8 @@
                         <form method="POST" action="<?= base_url(); ?>/point/update_nilai">
                             <div class="form-group">
                                 <label for="id_lomba">Nama Lomba</label>
-                                <input type="text" class="form-control text-capitalize" id="nama_lomba" name="nama_lomba" autocomplete="off" placeholder="<?= $lomba['nama_lomba'];  ?>" value="<?= $lomba['nama_lomba'];  ?>" disable>
-                                <input type="hidden" class="form-control text-capitalize" id="id_lomba" name="id_lomba" autocomplete="off" value="<?= $lomba['id_lomba'];  ?>" disable>
+                                <input type="text" class="form-control text-capitalize" id="nama_lomba" name="nama_lomba" autocomplete="off" placeholder="<?= $lomba['nama_lomba'];  ?>" value="<?= $lomba['nama_lomba'];  ?>" disabled>
+                                <input type="hidden" class="form-control text-capitalize" id="id_lomba" name="id_lomba" autocomplete="off" value="<?= $lomba['id_lomba'];  ?>" disabled>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-10">
@@ -21,8 +21,8 @@
                             <div class=" form-row">
                                 <?php foreach ($point as $p) : ?>
                                 <div class="form-group col-md-10">
-                                    <input type="text" class="form-control" id="nama_peserta" name="nama_peserta[]" autocomplete="off"  value="<?= $p['nama_peserta'] ?>" disable>
-                                    <input type="hidden" class="form-control" id="id_peserta" name="id_peserta[]" autocomplete="off" value="<?= $p['id_peserta'] ?>" disable>
+                                    <input type="text" class="form-control" id="nama_peserta" name="nama_peserta[]" autocomplete="off"  value="<?= $p['nama_peserta'] ?>" disabled>
+                                    <input type="hidden" class="form-control" id="id_peserta" name="id_peserta[]" autocomplete="off" value="<?= $p['id_peserta'] ?>" disabled>
                                 </div>
                                 <div class=" form-group col-md-2">
                                     <input type="number" class="form-control uang" id="nilai" name="nilai[]" autocomplete="off" value="<?= $p['nilai'] ?>" required>

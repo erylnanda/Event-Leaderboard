@@ -19,4 +19,10 @@ class M_Point extends CI_Model
         return $hasil->result_array();
     }
     // Tambah point
+    public function get_point_leaderboard()
+    {
+       $sql = "SELECT SUM(nilai.nilai) AS total, peserta.nama_peserta, peserta.foto FROM `nilai` RIGHT JOIN peserta ON nilai.id_peserta = peserta.id_peserta GROUP BY peserta.id_peserta ORDER BY total DESC";
+        $hasil = $this->db->query($sql);
+        return $hasil->result_array(); 
+    }
 }

@@ -33,7 +33,7 @@
                     <div class="card-body p-0">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">LOGIN BUKU USAHA</h1>
+                                <h1 class="h4 text-gray-900 mb-4">LOGIN LEADERBOARD EVENT</h1>
                             </div>
                             <div class="flash-data" data-flashdata="<?= $this->session->flashdata('pesan'); ?>"></div>
                             <?php if ($this->session->flashdata('error')) : ?>
@@ -58,11 +58,8 @@
                                 </button>
                             </form>
                             <hr>
-                            <!-- <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div> -->
                             <div class="text-center">
-                                <p class="small">Belum Punya Akun? Silahkan <a href="<?= base_url('auth/registrasi') ?>" class="text-decoration-none text-info"><b>Registrasi</b> </a></p>
+                                <a class="small" href="<?= base_url('') ?>">HOME</a>
                             </div>
                         </div>
 

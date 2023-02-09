@@ -66,13 +66,10 @@ class Peserta extends CI_Controller
 			// $config['max_height']           = 1024;
 
 			$this->load->library('upload', $config);
-
 			if (!$this->upload->do_upload('foto')) {
-				$data['error'] = $this->upload->display_errors();
-                $this->load->view('template/header', $data);
-                $this->load->view('template/sidebar', $data);
-                $this->load->view('peserta/tambah_peserta', $data);
-                $this->load->view('template/footer');
+				$this->M_Peserta->tambah_peserta_1($user_id,$new_data);
+                $this->session->set_flashdata('pesan', 'Tambah peserta Produk');
+                redirect('peserta');
 			} else {
 				$uploaded_data = $this->upload->data();
 				$new_data = $uploaded_data['file_name'];

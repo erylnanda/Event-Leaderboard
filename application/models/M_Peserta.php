@@ -20,6 +20,16 @@ class M_Peserta extends CI_Model
 
         $this->db->insert('peserta', $data);
     }
+    public function tambah_peserta_1($user_id)
+    {
+        $data = [
+            'user_id' => $user_id,
+            'nama_peserta' => htmlspecialchars(ucwords($this->input->post('nama'))),
+            'foto' => "stockphoto.jpg"
+        ];
+
+        $this->db->insert('peserta', $data);
+    }
 
     // Hapus peserta
 
