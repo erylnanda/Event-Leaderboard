@@ -25,7 +25,7 @@
                                     <input type="hidden" class="form-control" id="id_peserta" name="id_peserta[]" autocomplete="off" value="<?= $p['id_peserta'] ?>">
                                 </div>
                                 <div class=" form-group col-md-2">
-                                    <input type="number" class="form-control uang" id="nilai" name="nilai[]" autocomplete="off" value="<?= $p['nilai'] ?>" required>
+                                    <input type="number" class="form-control uang" id="nilai" name="nilai[]" autocomplete="off" value="<?= $p['nilai'] ?>" min="0" max="100" required>
                                 </div>
                                 <?php endforeach; ?>
                             </div>
