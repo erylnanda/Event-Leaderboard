@@ -8,6 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/home/css/style.css">
+	<style>
+		a:link {
+			text-decoration: none;
+			}
+
+		a:hover {
+			text-decoration: none;
+			}
+	</style>
 </head>
 <body>
 	<section class="main-content">
@@ -18,21 +27,24 @@
 
 			<div class="row">
 				<?php if ($peserta != null) : ?>
-					<div class="col-sm-4">
+					<div class="col-sm-4" style="text-decoration: none">
+						<a href="<?= base_url(); ?>home/detail/<?= $peserta[1]['id_peserta'] ?>">	
 						<div class="leaderboard-card">
 							<div class="leaderboard-card__top">
-								<h3 class="text-center">2</h3>
+								<h3 class="text-center text-dark">2</h3>
 							</div>
 							<div class="leaderboard-card__body">
 								<div class="text-center">
 									<img src="<?= base_url('upload/avatar/' .$peserta[1]['foto']); ?>" class="circle-img mb-2" alt="User Img">
-									<h5 class="mb-0"><?= $peserta[1]['nama_peserta']; ?></h5>
-									<h5 class="mb-0"><?= $peserta[1]['total']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[1]['nama_peserta']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[1]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="col-sm-4">
+						<a href="<?= base_url(); ?>home/detail/<?= $peserta[0]['id_peserta'] ?>">
 						<div class="leaderboard-card leaderboard-card--first">
 							<div class="leaderboard-card__top">
 								<h3 class="text-center">1</h3>
@@ -40,25 +52,28 @@
 							<div class="leaderboard-card__body">
 								<div class="text-center">
 									<img src="<?= base_url('upload/avatar/' .$peserta[0]['foto']); ?>" class="circle-img mb-2" alt="User Img">
-									<h5 class="mb-0"><?= $peserta[0]['nama_peserta']; ?></h5>
-									<h5 class="mb-0"><?= $peserta[0]['total']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[0]['nama_peserta']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[0]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="col-sm-4">
+						<a href="<?= base_url(); ?>home/detail/<?= $peserta[2]['id_peserta'] ?>">
 						<div class="leaderboard-card">
 							<div class="leaderboard-card__top">
-								<h3 class="text-center">3</h3>
+								<h3 class="text-center text-dark">3</h3>
 							</div>
 							<div class="leaderboard-card__body">
 								<div class="text-center">
 									<img src="<?= base_url('upload/avatar/' .$peserta[2]['foto']); ?>" class="circle-img mb-2" alt="User Img">
-									<h5 class="mb-0"><?= $peserta[2]['nama_peserta']; ?></h5>
-									<h5 class="mb-0"><?= $peserta[2]['total']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[2]['nama_peserta']; ?></h5>
+									<h5 class="mb-0 text-dark"><?= $peserta[2]['total']; ?></h5>
 								</div>
 							</div>
 						</div>
+						</a>
 					</div>
 				<?php else : ?>
 					<div class="jumbotron">
@@ -95,22 +110,29 @@
 									<div class="d-flex align-items-center">
 										<img src="<?= base_url('upload/avatar/' .$p['foto']); ?>" class="circle-img circle-img--small mr-2" alt="User Img">
 										<div class="user-info__basic">
+										<a href="<?= base_url(); ?>home/detail/<?= $p['id_peserta'] ?>">
 											<h5 class="mb-0"><?= $p['nama_peserta']; ?></h5>
+											</a>
 										</div>
 									</div>
 								</td>
 								<td>
 									<div class="d-flex align-items-baselin">
-										<h4 class="mr-1"><?= $p['total']; ?></h4>
+										<a href="<?= base_url(); ?>home/detail/<?= $p['id_peserta'] ?>">
+										<h4 class="mr-1 text-dark"><?= $p['total']; ?></h4>
+										</a>
 									</div>
 								</td>
 								<td>
 									<div class="d-flex align-items-baseline justify-content-center">
-										<h4 class="mr-1"><?= $i; ?></h4>
+										<a href="<?= base_url(); ?>home/detail/<?= $p['id_peserta'] ?>">
+										<h4 class="mr-1 text-dark"><?= $i; ?></h4>
+										</a>
 									</div>
 								</td>
-								<?php $i++; ?>
+								<?php $i++; ?>	
 							</tr>
+
 						<?php endforeach; ?>
 					</tbody>
 				<?php else : ?>

@@ -69,7 +69,7 @@ class Point extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'Update Point';
-        $data['point'] = $this->M_Point->get_point_lomba($id_lomba, $user_id);
+        $data['point'] = $this->M_Point->get_point_lomba($id_lomba);
         $data['lomba'] = $this->db->get_where('lomba', ['id_lomba' => $id_lomba])->row_array();
 
         $this->load->view('template/header', $data);
