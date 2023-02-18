@@ -33,7 +33,7 @@
                     <div class="card-body p-0">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">REGISTRASI BUKU USAHA</h1>
+                                <h1 class="h4 text-gray-900 mb-4">REGISTRASI USER</h1>
                             </div>
                             <form class="user" method="POST" action="<?= base_url() ?>auth/registrasi">
                                 <div class="form-group">
@@ -41,7 +41,7 @@
                                     <?= form_error('username', '<small class="form-text text-danger pl-3">', '</small>') ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="namaUsaha" placeholder="Nama Usaha" name="namaUsaha" autocomplete="off" value="<?= set_value('namaUsaha');  ?>">
+                                    <input type="text" class="form-control form-control-user" id="namaUsaha" placeholder="Nama Lengkap" name="namaUsaha" autocomplete="off" value="<?= set_value('namaUsaha');  ?>">
                                     <?= form_error('namaUsaha', '<small class="form-text text-danger pl-3">', '</small>') ?>
                                 </div>
                                 <div class="form-group row">

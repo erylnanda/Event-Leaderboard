@@ -16,6 +16,7 @@ class Point extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'Data Point';
+        $data['user_id'] = $user_id;
         $data['lomba'] = $this->M_Lomba->get_lomba($user_id);
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
@@ -29,6 +30,7 @@ class Point extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'Tambah Data Point';
+        $data['user_id'] = $user_id;
         $data['peserta'] = $this->M_Peserta->get_peserta($user_id);
         $data['idlomba'] = $id_lomba;
         $data['lomba'] = $this->db->get_where('lomba', ['id_lomba' => $id_lomba])->row_array();
@@ -69,6 +71,7 @@ class Point extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'Update Point';
+        $data['user_id'] = $user_id;
         $data['point'] = $this->M_Point->get_point_lomba($id_lomba);
         $data['lomba'] = $this->db->get_where('lomba', ['id_lomba' => $id_lomba])->row_array();
 

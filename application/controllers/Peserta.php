@@ -18,6 +18,7 @@ class Peserta extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'List Peserta';
+        $data['user_id'] = $user_id;
         $data['peserta'] = $this->M_Peserta->get_peserta($user_id);
 
         $this->load->view('template/header', $data);
@@ -32,6 +33,7 @@ class Peserta extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
+        $data['user_id'] = $user_id;
         $data['title'] = 'Tambah Peserta Lomba';
 
         $this->form_validation->set_rules(
@@ -95,7 +97,9 @@ class Peserta extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['nama'] = $data['user']['namaUsaha'];
+        $user_id = $data['user']['id_username'];
         $data['title'] = 'Update peserta Produk';
+        $data['user_id'] = $user_id;
         $data['peserta'] = $this->db->get_where('peserta', ['id_peserta' => $id_peserta])->row_array();
         $a = $this->db->get_where('peserta', ['id_peserta' => $id_peserta])->row_array();
 

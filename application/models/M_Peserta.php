@@ -6,7 +6,7 @@ class M_Peserta extends CI_Model
     // Produk
     public function get_peserta($user_id)
     {
-        return $this->db->get_where('peserta', ['user_id' => $user_id])->result_array();
+        return $this->db->get('peserta')->result_array();
     }
 
     // Tambah peserta

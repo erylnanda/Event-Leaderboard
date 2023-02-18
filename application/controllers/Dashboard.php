@@ -17,8 +17,9 @@ class Dashboard extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['title'] = 'Dashboard';
         $data['nama'] = $data['user']['namaUsaha'];
-        $data['total_peserta'] = $this->db->where(['user_id'=>$user_id])->from("peserta")->count_all_results();
-        $data['total_lomba'] = $this->db->where(['user_id'=>$user_id])->from("lomba")->count_all_results();
+        $data['user_id'] = $user_id;
+        $data['total_peserta'] = $this->db->from("peserta")->count_all_results();
+        $data['total_lomba'] = $this->db->from("lomba")->count_all_results();
         $data['bulan'] = $bulan;
         // $data['jual'] = $this->Model_Keuangan->total_jual($user_id);
         // $data['total_tahun'] = $this->Model_Keuangan->total_tahun($user_id);

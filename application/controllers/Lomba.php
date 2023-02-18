@@ -18,7 +18,9 @@ class Lomba extends CI_Controller
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
         $data['title'] = 'List Lomba';
+        $data['user_id'] = $user_id;
         $data['lomba'] = $this->M_Lomba->get_lomba($user_id);
+        $data['user'] = $this->Model_Auth->get_user($user_id);
 
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar', $data);
@@ -32,7 +34,10 @@ class Lomba extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $user_id = $data['user']['id_username'];
         $data['nama'] = $data['user']['namaUsaha'];
-        $data['title'] = 'Tambah Lomba Lomba';
+        $data['title'] = 'Tambah Lomba';
+        $data['user_id'] = $user_id;
+        $data['user'] = $this->Model_Auth->get_user($user_id);
+
 
         $this->form_validation->set_rules(
             'nama',
@@ -40,6 +45,16 @@ class Lomba extends CI_Controller
             'trim|required',
             [
                 'required' => "Nama Lomba Harus Diisi"
+            ]
+
+        );
+
+        $this->form_validation->set_rules(
+            'panitia',
+            'Panitia',
+            'required',
+            [
+                'required' => "Panitia Harus Diisi"
             ]
 
         );
@@ -69,8 +84,11 @@ class Lomba extends CI_Controller
     {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['nama'] = $data['user']['namaUsaha'];
-        $data['title'] = 'Update lomba Produk';
-        $data['lomba'] = $this->db->get_where('lomba', ['id_lomba' => $id_lomba])->row_array();
+        $user_id = $data['user']['id_username'];
+        $data['title'] = 'Update Lomba';
+        $data['user_id'] = $user_id;
+        $data['lomba'] = $this->M_Lomba->get_lomba_id($id_lomba);
+        $data['user'] = $this->Model_Auth->get_user($user_id);
 
         $this->form_validation->set_rules(
             'nama',
@@ -79,6 +97,16 @@ class Lomba extends CI_Controller
             [
                 'required' => "Nama Lomba Harus Diisi",
                 'is_unique' => "Nama Lomba Sudah Ada"
+            ]
+
+        );
+
+        $this->form_validation->set_rules(
+            'panitia',
+            'Panitia',
+            'required',
+            [
+                'required' => "Panitia Harus Diisi"
             ]
 
         );

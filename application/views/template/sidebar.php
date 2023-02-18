@@ -30,6 +30,7 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+            <?php if ($user_id == 23) : ?>
             <li class="menu-header">Lomba</li>
             <li <?= $this->uri->segment(1) == 'Peserta' ? 'class="active"' : "" ?>>
                 <a class="nav-link" href="<?= base_url(); ?>Peserta">
@@ -43,7 +44,15 @@
                     <span>Daftar Lomba</span>
                 </a>
             </li>
-
+            <li class="menu-header">USER</li>
+            <li <?= $this->uri->segment(1) == 'User' ? 'class="active"' : "" ?>>
+                <a class="nav-link" href="<?= base_url(); ?>User">
+                    <i class="fas fa-user"></i>
+                    <span>Data User</span>
+                </a>
+            </li>
+            <?php endif ?>
+            
             <li class="menu-header">Nilai</li>
             <li <?= $this->uri->segment(1) == 'Point' ? 'class="active"' : "" ?>>
                 <a class="nav-link" href="<?= base_url(); ?>Point">

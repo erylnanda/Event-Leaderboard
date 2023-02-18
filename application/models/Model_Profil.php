@@ -16,7 +16,7 @@ class Model_Profil extends CI_Model
     public function update_password($user_id)
     {
         $data = [
-            "password" => htmlspecialchars(password_hash($this->input->post('new_password1'), PASSWORD_DEFAULT))
+            "password" => md5($this->input->post('new_password1'))
         ];
 
         $this->db->where('id_username', $user_id);

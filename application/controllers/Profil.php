@@ -15,6 +15,7 @@ class Profil extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $user_id = $data['user']['id_username'];
         $data['title'] = 'Profil Usaha';
+        $data['user_id'] = $user_id;
         $data['nama'] = $data['user']['namaUsaha'];
 
         $this->form_validation->set_rules('namaUsaha', 'Nama Usaha', 'required|trim', [
@@ -39,6 +40,7 @@ class Profil extends CI_Controller
         $user_id = $data['user']['id_username'];
         $user_password = $data['user']['password'];
         $data['title'] = 'Ganti Password';
+        $data['user_id'] = $user_id;
         $data['nama'] = $data['user']['namaUsaha'];
 
         $this->form_validation->set_rules(

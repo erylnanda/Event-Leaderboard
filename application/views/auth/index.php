@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href='<?= base_url(); ?>/assets/img/icon/favicon.ico' rel='shortcut icon'>
-    <title>Login Buku Usaha</title>
+    <title>LOGIN LEADERBOARD EVENT</title>
 
     <!-- Custom fonts for this template-->
     <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->

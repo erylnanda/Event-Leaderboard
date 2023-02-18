@@ -17,7 +17,7 @@
                                         <input type="text" class="form-control" disabled id="username" value="<?= $user['username'] ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="namaUsaha">Nama Usaha</label>
+                                        <label for="namaUsaha">Nama Lengkap</label>
                                         <input type="text" class="form-control" id="namaUsaha" name="namaUsaha" value="<?= $user['namaUsaha'] ?>" autocomplete="off">
                                         <?= form_error('namaUsaha', '<small class="form-text text-danger pl-3">', '</small>') ?>
                                     </div>
