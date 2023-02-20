@@ -62,6 +62,26 @@ class Point extends CI_Controller
         redirect('point');
     }
 
+    public function reset_point()
+    {
+        $this->M_Point->empty_table();
+        $this->db->set('status', 0);
+        $this->db->where('status', 1);
+        $this->db->update('lomba');
+        $this->session->set_flashdata('pesan', 'Point Berhasil Di-Reset ');
+        redirect('point');
+    }
+
+    public function hapus_point($idlomba)
+    {
+        $this->M_Point->hapus_point($idlomba);
+        $this->db->set('status', 0);
+        $this->db->where('id_lomba', $idlomba);
+        $this->db->update('lomba');
+        $this->session->set_flashdata('pesan', 'Point Berhasil Di-hapus ');
+        redirect('point');
+    }
+
     // Hapus Point
 
 

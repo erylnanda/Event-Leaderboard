@@ -9,6 +9,16 @@ class M_Point extends CI_Model
         return $this->db->get_where('point', ['user_id' => $user_id])->result_array();
     }
 
+    public function empty_table(){
+        $this->db->empty_table('nilai');
+    }
+
+    public function hapus_point($id_lomba)
+    {
+        $this->db->where('id_lomba', $id_lomba);
+        $this->db->delete('nilai');
+    }
+
     public function get_point_lomba($id_lomba)
     {
         $this->db->select('a.*, b.*');
